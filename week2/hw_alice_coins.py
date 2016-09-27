@@ -41,6 +41,8 @@ P_A_given_B = P_A_and_B / P_B
 # a random coin. Again, without looking at it, she tosses it. What is
 # the probability that the coin shows heads face-up?
 
+# explicaciones:
+
 # --------------------------------------------------------------------------------
 
 # Scenario A: the first draw was the HT so the second draw will be from HT,HH,HH,TT coins.
@@ -50,4 +52,29 @@ P_A_given_B = P_A_and_B / P_B
 
 # P(H) = p(A) ∗ p(H|A) + p(B) ∗ p(H|B) + p(C) ∗ p(H|C) + p(D) ∗ p(H|D)
 # P(H) = 2 ∗ p(A) ∗ p(H|A) + 2 ∗ p(C) ∗ p(H|C)
+
+# --------------------------------------------------------------------------------
+
+# A = evento de sacar 1ra moneda que sea H
+# B = evento de sacar 2da moneda y que sea H
+
+# queremos averiguar P(A∩B) = P(A|B)P(B) = P(B|A)P(A). pensemos en P(B|A)P(A)
+
+# A se puede descomponer en 2 eventos:
+# C = evento de sacar moneda HT
+# D = evento de sacar moneda HH
+# C y D disjuntos => A = CUD
+# P(D) = 2/3
+# P(C) = 1 - 2/3 = 1/3
+
+# reemplazando A:
+# => P(B|A)P(A) = P(B|CUD)P(CUD) = P(B|C)*1/3 + P(B|D)*2/3
+
+# probability space de C y D:
+# omega de C = {HT:1/4,HH:2/4,TT:1/4}
+# omega de D = {HT:2/4,HT:1/4,TT:1/4}
+
+# Fraction(13,24)
+
+# --------------------------------------------------------------------------------
 
